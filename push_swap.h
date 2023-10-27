@@ -6,7 +6,7 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 20:26:18 by csil              #+#    #+#             */
-/*   Updated: 2023/10/26 15:44:16 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 10:25:33 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_bag
 	t_li			*stack_a;
 	t_li			*stack_b;
 	int				len_total_list;
+	int				max_shift;
 
 }				t_bag;
 
@@ -80,5 +81,7 @@ void	len_equal_5(t_bag *stock);
 void	len_equal_4(t_bag *stock);
 void	len_equal_3(t_bag *stock);
 void	len_equal_2(t_bag *stock);
+void	radix(t_bag *stock, int shift);
+void	find_max_shift(t_bag *stock);
 
 #endif

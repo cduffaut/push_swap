@@ -6,7 +6,7 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:01:56 by csil              #+#    #+#             */
-/*   Updated: 2023/10/27 09:58:18 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 10:42:12 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,14 @@ int	main(int argc, char **argv)
 	assign_index(&stock.stack_a);
 	stock.len_total_list = lst_len(stock.stack_a);
 	if (check_sorted_list(&stock) == 1)
-	{
-		free_all_stock(&stock, 0);
-		return (0);
-	}
+		free_all_stock(&stock, 2);
 	else if (stock.len_total_list <= 5)
 		main_less_or_5(&stock);
+	else
+	{
+		find_max_shift(&stock);
+		radix(&stock, 0);
+	}
 	free_all_stock(&stock, 0);
 	return (0);
 }
