@@ -6,7 +6,7 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:42:38 by csil              #+#    #+#             */
-/*   Updated: 2023/10/27 09:17:48 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 12:55:06 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int	main_check(int ac, char **av)
 		check_error = argv_check(ac, av);
 	}
 	if (check_error == 1)
-		ft_printf("Error\n");
+		ft_putstr_fd("Error\n", 2);
 	if (check_error > 0)
 		return (1);
 	return (0);

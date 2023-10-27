@@ -6,7 +6,7 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 22:36:47 by csil              #+#    #+#             */
-/*   Updated: 2023/10/25 00:11:53 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 13:35:19 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,15 +97,6 @@ void	assign_index(t_li **list)
 			tmp = tmp->next;
 	}
 }
-
-/* 
-	Dans le main:
-	Init la struct bage en NULL (cf git Arnaud)
-	La faire passer par les cas d'erreur / create list
-	Assign les previous
-	Assign les index
-	Finir par print tous les index
-*/
 
 /* A SUPPRIMER */
 /*void	print_index(t_li *list)

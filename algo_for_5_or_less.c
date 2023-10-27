@@ -6,7 +6,7 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:44:43 by csil              #+#    #+#             */
-/*   Updated: 2023/10/26 15:58:41 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 13:53:59 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	len_equal_4(t_bag *stock)
 	}
 }
 
-void	len_equal_5(t_bag *stock)
+/*void	len_equal_5(t_bag *stock)
 {
 	if (stock->stack_b->nbr < stock->stack_a->next->nbr)
 	{
@@ -112,9 +112,28 @@ void	len_equal_5(t_bag *stock)
 		push_a(&stock->stack_a, &stock->stack_b);
 		rotate_a(&stock->stack_a, 0);
 	}
+}*/
+
+void	len_equal_5(t_bag *stock)
+{
+	t_li	*last_node;
+
+	last_node = ptr_last_node(stock->stack_a);
+	if (last_node->index == 1)
+		reverse_rotate_a(&stock->stack_a, 0);
+	else
+	{
+		while (stock->stack_a->index != 1)
+		{
+			rotate_a(&stock->stack_a, 0);
+		}
+	}
+	push_b(&stock->stack_a, &stock->stack_b);
+	len_equal_4(stock);
+	push_a(&stock->stack_a, &stock->stack_b);
 }
 
-void	main_less_or_5(t_bag *stock)
+/*void	main_less_or_5(t_bag *stock)
 {
 	if (stock->len_total_list == 2)
 		len_equal_2(stock);
@@ -131,4 +150,16 @@ void	main_less_or_5(t_bag *stock)
 		else
 			len_equal_5(stock);
 	}
+}*/
+
+void	main_less_or_5(t_bag *stock)
+{
+	if (stock->len_total_list == 2)
+		len_equal_2(stock);
+	else if (stock->len_total_list == 3)
+		len_equal_3(stock);
+	else if (stock->len_total_list == 4)
+		len_equal_4(stock);
+	else if (stock->len_total_list == 5)
+		len_equal_5(stock);
 }

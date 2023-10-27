@@ -6,14 +6,14 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:01:56 by csil              #+#    #+#             */
-/*   Updated: 2023/10/27 10:42:12 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 13:51:19 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* A SUPPRIMER */
-void	print_list(t_li *list)
+/*void	print_list(t_li *list)
 {
 	ft_printf("list:\n");
 	while (list)
@@ -22,7 +22,7 @@ void	print_list(t_li *list)
 		ft_printf("%d\n", list->nbr);
 		list = list->next;
 	}
-}
+}*/
 
 int	main(int argc, char **argv)
 {
@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 
 	stock = (t_bag){};
 	if (main_check(argc, argv) == 1)
-		return (1);
+		exit(1);
 	stock.stack_a = creation_linked_list(argc, argv);
 	stock.stack_b = NULL;
 	if (stock.stack_a == NULL)
