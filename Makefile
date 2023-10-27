@@ -37,7 +37,7 @@ $(NAME) :	${OBJS}
 		$(GCC) -o ${NAME} ${OBJS} ${LIBFT}
 
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f $(OBJS)
 	${MLIBFT} clean
 
 fclean:	clean
