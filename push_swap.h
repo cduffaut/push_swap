@@ -6,7 +6,7 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 20:26:18 by csil              #+#    #+#             */
-/*   Updated: 2023/10/27 10:25:33 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 16:39:15 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int		smaller_nbr_list(t_li *list, int number);
 int		biggest_nbr_list(t_li *list);
 int		check_sorted_list(t_bag *stock);
 void	free_all_stock(t_bag *stock, int quit);
+void	check_double_list(t_li *list);
 
 /* ---------- mooving nodes function --------- */
 
