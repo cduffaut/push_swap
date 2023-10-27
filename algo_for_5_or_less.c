@@ -6,7 +6,7 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:44:43 by csil              #+#    #+#             */
-/*   Updated: 2023/10/27 13:53:59 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 15:07:55 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,35 +85,6 @@ void	len_equal_4(t_bag *stock)
 	}
 }
 
-/*void	len_equal_5(t_bag *stock)
-{
-	if (stock->stack_b->nbr < stock->stack_a->next->nbr)
-	{
-		push_a(&stock->stack_a, &stock->stack_b);
-		swap_a(&stock->stack_a, 0);
-	}
-	else if (stock->stack_b->nbr < stock->stack_a->next->next->nbr)
-	{
-		rotate_a(&stock->stack_a, 0);
-		rotate_a(&stock->stack_a, 0);
-		push_a(&stock->stack_a, &stock->stack_b);
-		reverse_rotate_a(&stock->stack_a, 0);
-		reverse_rotate_a(&stock->stack_a, 0);
-	}
-	else if (stock->stack_b->nbr < stock->stack_a->next->next->next->nbr)
-	{
-		reverse_rotate_a(&stock->stack_a, 0);
-		push_a(&stock->stack_a, &stock->stack_b);
-		rotate_a(&stock->stack_a, 0);
-		rotate_a(&stock->stack_a, 0);
-	}
-	else if (stock->stack_b->nbr > stock->stack_a->next->next->next->nbr)
-	{
-		push_a(&stock->stack_a, &stock->stack_b);
-		rotate_a(&stock->stack_a, 0);
-	}
-}*/
-
 void	len_equal_5(t_bag *stock)
 {
 	t_li	*last_node;
@@ -132,25 +103,6 @@ void	len_equal_5(t_bag *stock)
 	len_equal_4(stock);
 	push_a(&stock->stack_a, &stock->stack_b);
 }
-
-/*void	main_less_or_5(t_bag *stock)
-{
-	if (stock->len_total_list == 2)
-		len_equal_2(stock);
-	else if (stock->len_total_list == 3)
-		len_equal_3(stock);
-	else if (stock->len_total_list == 4)
-		len_equal_4(stock);
-	else if (stock->len_total_list == 5)
-	{
-		push_b(&stock->stack_a, &stock->stack_b);
-		len_equal_4(stock);
-		if (stock->stack_b->nbr < stock->stack_a->nbr)
-			push_a(&stock->stack_a, &stock->stack_b);
-		else
-			len_equal_5(stock);
-	}
-}*/
 
 void	main_less_or_5(t_bag *stock)
 {
