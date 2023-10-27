@@ -6,7 +6,7 @@
 /*   By: csil <csil@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:42:38 by csil              #+#    #+#             */
-/*   Updated: 2023/10/26 15:05:19 by csil             ###   ########.fr       */
+/*   Updated: 2023/10/27 09:17:48 by csil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	quotes_doublons(char **tab)
 		{
 			if (j == i)
 				j++;
-			if (tab[j] && strcmp(tab[i], tab[j]) == 0)
+			if (tab[j] && ft_strcmp(tab[i], tab[j]) == 0)
 			{
 				return (1);
 			}
